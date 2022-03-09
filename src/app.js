@@ -1,4 +1,5 @@
-console.log("Hello World")
+console.log("Hello")
+console.log("Katie Nordstrom")
 // TODO this is my to do list
 
 // NOTE this is my first note
