@@ -39,13 +39,27 @@ for (var i=0; i<10; i++){
 console.log(i)
 }
 
-// JavaScript if Statements
-var number = 9
+// JavaScript if Statements - you can put conditions for a specific type of data you need - eg login credentials
+var number = 10
 if (number === 10) {
     console.log("answer = " + number)
-} else {
+} 
+else {
     console.log("error")
-}
+} 
+// === is strict quality. dont just just check the type of variable but check that it is 10! Otherwise JS might manipulate it and change something.
+
+// const and let - var you can reassign the value-causes problems eg name, you could go back and change. 
+//if you dont want to change the data type of that  - const will keep this STRICLY thesame. 
+
+let num = 3 //swap let to const to see it stay strictly the same. 
+console.log(num)
+
+
+// num = "5" does not work bc youre reassigning. Says error. Cannot chnage the value PERIOD with const. 
+//Let allows a bit of flexibilty. You can use the number decalare in any other datatype. 
+//eg address - you can move house. const would not let you update it. let would allow you to update. 
+
 
 
  
