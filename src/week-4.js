@@ -130,6 +130,31 @@ var numbers = [1, 2, 3, 4, 5]
 console.log(numbers[3])
 
 
+// ({} === {})
+
+//Non-values
+
+// var nonvalue 
+// console.log(nonvalue)
+
+function nonvalue(x) { 
+    return x
+}
+
+console.log(nonvalue())
+
+var value = {}
+// console.log(nonvalue.first_name) 
+
+// if (value === undefined || value === null) 
+// if (!value)
+
+//False. 0. '', NaN                (considered a false value)
+
+
+
+
+
 
 
 
