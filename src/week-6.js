@@ -194,13 +194,13 @@ What types?
 
 // console.log(div(6, 3))
 
-function fourNumbers(num1, num2, num3, num4) { //names inside function definition are parameters -must have commas
-let result = num1 + num2 + num3 + num4
-return`the sum of Four Numbers is ${result}`
-}
-console.log(fourNumbers(1, 2, 3 , 4)) // these are arguments - arguments are the values that the function is recieving - when you call the function is happens here
+// function fourNumbers(num1, num2, num3, num4) { //names inside function definition are parameters -must have commas
+// let result = num1 + num2 + num3 + num4
+// return`the sum of Four Numbers is ${result}`
+// }
+// console.log(fourNumbers(1, 2, 3 , 4)) // these are arguments - arguments are the values that the function is recieving - when you call the function is happens here
 
-function test1() {
+// function test1() {
 
-}
-console.log(test1()) -will return undefined
+// }
+// console.log(test1()) -will return undefined
