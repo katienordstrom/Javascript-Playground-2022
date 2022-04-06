@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Created in week 3. Beginning to learn javascript",
   "main": "paircoding.js",
-  "scripts": { 
+  "scripts": {
     "dev": "nodemon ./src/paircoding.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
