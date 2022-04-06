@@ -32,8 +32,23 @@
 // const result = tostringarray(["ali", 2, 3, 4, "green"])
 // console.log(typeof result)
 
-function ArrayToString(arr){
-    return arr.join('')
+// function ArrayToString(arr){
+//     return arr.join('')
 
-}
-console.log(ArrayToString(["Katie ", 23, " Purple"]))
+// }
+// console.log(ArrayToString(["Katie ", 23, " Purple"]))
+
+
+//create a function that takes an array and return the datatypes of the array values in a new array
+//ArrayValueTypes=(["Ali", 12, "Blue", [], True,]) -> [string, number, string, object, boolean]
+
+// function arrayValueTypes(arr) {
+//     var newArray = []; 
+
+// for (var i=0; i < arr.length; i++){
+//     newArray[i] = typeof arr[i]
+// }
+// return newArray
+// }
+
+const arrayValueTypes = arr => arr.map(x => typeof x)
