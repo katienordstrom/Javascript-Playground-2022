@@ -1,0 +1,2 @@
+//Create a function that takes two strings and return either true or flase depending on whether
+//the total number of characters in the first string is equal to the total numbers of characters in the second string
