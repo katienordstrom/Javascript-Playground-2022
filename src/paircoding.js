@@ -11,11 +11,20 @@
 
 
 
+//// Write a function that converts an object to an array
 
+// function objectToArray(obj){
+//     var arr = []
+//     for (var i in obj)(
+//     arr.push([i,obj,[i]])
+//     )
+//     return arr
+// }
 
-const onlyNumbers = arr => arr.filter(Numbers.isInterger) //ES6 to ES5
-
-function onlyNumbers(){burn
-
+function largest(arr) {
+    var newLargest = [];
+    for (let index = 0; index < arr.length; index++) {
+      newLargest.push(arr[index].sort[arr.length-1]);
+        
+    }
 }
-????????????????????? wtf
