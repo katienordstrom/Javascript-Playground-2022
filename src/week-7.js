@@ -306,7 +306,9 @@
 // console.log(person2.getFullName)
 // console.log(person1)
 
-//DOM
+
+
+
 
 
 
