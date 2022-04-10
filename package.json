@@ -2,7 +2,7 @@
   "name": "javascript-playground-2022",
   "version": "1.0.0",
   "description": "Created in week 3. Beginning to learn javascript",
-  "main": "app.js",
+  "main": "week8.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
