@@ -69,7 +69,7 @@
 // var months = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 // console.log(months[8])
 
-// function nameOfMonth(num) {
+// function nameOfMonth(num) {     //experimenting
 //     let answer = ""
 //   if(num === 1) {
 // console.log("January");
@@ -147,27 +147,146 @@
 // console.log(oddNumbersSum(7))
 
 
-// create a function that takes an array of strings and numbers and 
-//filter out the array so that it retruns an array of numbers
+// // create a function that takes an array of strings and numbers and 
+// //filter out the array so that it retruns an array of numbers
 
-// const arr = [1, 'katie', 3, 5, 'hello'];
-// const validNumbers = arr.filter(Number);
+// // const arr = [1, 'katie', 3, 5, 'hello'];
+// // const validNumbers = arr.filter(Number);
 
-// console.log(validNumbers);
+// // console.log(validNumbers);
 
-// function onyNumbers(arr){
-//     return arr.filter(val => Number.isInteger(val));
+// // function onyNumbers(arr){
+// //     return arr.filter(val => Number.isInteger(val));
+// // }
+// // console.log(onlyNumbers)
+
+// //create a function that takes a number as an argument and increment it by one 
+
+// function addbyOne (num) {
+//     return num+1;
 // }
-// console.log(onlyNumbers)
+// console.log(addbyOne(9))
 
-//create a function that takes a number as an argument and increment it by one 
+//Create a function that takes a boolean variable and return it as a string
+//example bolToStr(true) -> "true"
 
-function addbyOne (num) {
-    return num+1;
+// function bolToString(param){
+//     return param.toString()
+// }
+// console.log(bolToString(false))
+
+
+//Create a function that takes two numbers -num1, num2 -  in an array and returns an array 
+// containing all numbers greater than num1 and less that num 2
+//Example: 
+
+// function greaterThan (num1, num2, arr) {
+//    let filtered = [];
+//    let n = arr.length;
+//    for (var i=0; i<n; i++) {
+//        if (arr[i]>num1 && (arr[i]<num2)) {
+//            filtered.push(arr[i])
+//        }
+//    }
+//    return filtered
+// }
+// console.log(greaterThan(2,7,[1,2,3,4,5,6,7,8,9,10]))
+
+//create a function the calculates the area of a rectangle. if the arguements are 
+//invalid return an error message 
+
+// function rectArea(h,w){
+//     if(h < 0 || w < 0); {
+//     return "error";
+//     }
+//     return h*w
+// }
+// console.log(rectArea())
+
+//CLASSES
+
+//Example - template of class
+
+// class Classname {
+// constructor(param1, param2, ....){
+// this.prop1 = param1
+// this.prop2 = param2 
+// }
+// }
+
+// class Person { //created blueprint of class called Person -Class names have to have capital to be defined //MUST always say class
+//     constructor(name, age){ //constructor is a special method for initialising the instance of eaxh class we create - must be called constructor
+//         this.name = name;
+//         this.age = age;
+//     }
+// }
+
+// let personOne = new Person("Katie", 23);
+// let personTwo = new Person("Iain", 26);
+// let personThree = new Person("Sarah", 44);
+// let personFour = new Person("Nicole", 21);
+
+// console.log(personOne.name) //Prints Katie
+
+
+
+// class Student {}
+
+// const first_year = new Student()
+
+// //first_year.name //calling a class
+
+// class Student {
+//     constructor(name, id, age){
+//         this.name = name;
+//         this.id = id;
+//         this.age = age;
+//     }
+// }
+
+// let studentOne = new Student("Katie", 1234, 23);
+// let studentTwo = new Student("Iain", 4321, 26);
+// let studentThree = new Student("Keith", 6789, 19);
+// let studentFour = new Student("Rhylei", 9876, 20); 
+// let studentFive = new Student("Brittany", 4567, 30);
+
+// console.log(studentFive.name)
+
+
+// const x = function() {} //function
+// const y = class { } //class
+
+// Object.getPropertyOf(x)
+
+// Object.getPropertyOf(y)
+
+// function Student(name, age) {
+//     this.name = name
+//     this.age = age
+// } //class in plain js
+
+// class Student {
+//     constructor(name, age){
+//     this.name = name;
+//     this.age = age;
+//     }
+// } //ES6
+
+
+//create a class called greeting
+class Greeting {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    greet() {
+        return `Hello ${this.firstName} ${this.lastName}`;
+    }
 }
-console.log(addbyOne(9))
 
+const new_person = new Greeting("Katie", "Nordstrom")
 
+console.log(new_person.greet()) //brackets cause function
 
 
 
