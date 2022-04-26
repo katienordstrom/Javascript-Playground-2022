@@ -280,32 +280,144 @@
 //         this.lastName = lastName;
 //     }
 //     greet() {
-//         return `Hello ${this.firstName} ${this.lastName}`;
+// //         return `Hello ${this.firstName} ${this.lastName}`;
+// //     }
+// // }
+
+// // const new_person = new Greeting("Katie", "Nordstrom")
+
+// // console.log(new_person.greet()) //brackets cause function
+
+// class Date {
+//     constructor (year, monthIndex, day){
+// this.year = year;
+// this.monthIndex = monthIndex;
+// this.day = day;
 //     }
+
+
+    // var datesss = new Date(1998, 4, 15)
+
+
+// console.log(date1) //something not right fix
+
+
+//Experimenting with classes
+
+// class Date {
+// constructor (month, day, year){
+// this._month = month;
+// this._day = day;
+// this._year = year;
 // }
 
-// const new_person = new Greeting("Katie", "Nordstrom")
+// get date() {
+// return 
 
-// console.log(new_person.greet()) //brackets cause function
+// }
 
-class Date {
-    constructor (year, monthIndex, day){
-this.year = year;
-this.monthIndex = monthIndex;
-this.day = day;
-    }
+// const birthday = new Date('August 19, 1977 23:15:30');
 
 
-    var date1 = new Date(1998, 4, 15)
+// console.log(birthday.getDay());
 
 
-console.log(date1)
+// class Date {
+//     constructor (month, day, year){
+//     this._month = month + 1;
+//     this._day = day;
+//     this._year = year;
+
+//     }
+
+//     get stringDate() {
+//         return Date.toString()
+//     }
+//     }
+
+//     const xmas = new Date(11, 31, 2021)
+    
+
+    // console.log(xmas)
+
+
+    class Date {
+        constructor(month, day, year) {
+          this.month = month;
+          this.day = day;
+          this.year = year;
+        }
+
+
+    print(){
+       return `The date is ${this.month}/${this.day}/${this.year}`;
+        }
+
+        printAsString(){
+        
+
+        }
 
 
 
+         increment() {
+          if(this.day >= 31) {  
+            this.day = 1; 
+            if (this.month >= 12) {
+              this.month = 1;
+              this.year += 1;
+            } 
+            else {
+              this.month += 1;
+              this.day = 1;
+            } 
+          }
+            else {
+            this.day +=1;
+            }  
+          }
 
+          decrement(){
+            if(this.day <= 1) {  
+              this.day = 31; 
+              if (this.month = 1) {
+                this.month = 12;
+                this.year -= 1;
+              } 
+              else {
+                this.month -= 1;
+                this.day = 31;
+              } 
+            }
+              else {
+              this.day -=1;
+              }  
+         }
+        }
+      
+   
 
+let date1 = new Date(12, 31, 2022);
+let date2 = new Date(05, 31, 1998);
+let date3 = new Date(12, 31, 1999);
+let date4 = new Date(01, 01, 2022);
+date3.increment();
+date4.decrement();
+console.log(date4.print());
+/*if day is at maximum 
+if month is december
+      set month to january
+      increment year 
+if its not december 
+      increment the month
+  set day to one
+else they day is not at its max
+  increment day*/
 
+  
+
+      
+     
 
 
 
