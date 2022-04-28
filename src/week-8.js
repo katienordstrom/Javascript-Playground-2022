@@ -64,10 +64,7 @@
 
 // //Create a function that takes a number from 1-12 and returns its corresponding month
 
-// // var myDate = new Date (),
-// // month = myDate.getMonth(month);
-// // var months = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-// // console.log(months[8])
+
 
 // // function nameOfMonth(num) {     //experimenting
 // //     let answer = ""
@@ -346,22 +343,18 @@
           this.month = month;
           this.day = day;
           this.year = year;
+          this.monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+          this.monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+          this.daysOfMonth = this.monthDays[month-1] //wherever i see 31 put this.
         }
 
 
-    print(){
-       return `The date is ${this.month}/${this.day}/${this.year}`;
-        }
-
-        printAsString(){
-        
-
-        }
-
-
-
+    print(){ 
+    return `The date is ${this.month}/${this.day}/${this.year}.\nThe date is ${this.monthNames[this.month-1]} ${this.day}, ${this.year}.\nThe date is ${this.day} ${this.monthNames[this.month-1]}, ${this.year}.`
+    }
+  
          increment() {
-          if(this.day >= 31) {  
+          if(this.day >= this.daysOfMonth){  
             this.day = 1; 
             if (this.month >= 12) {
               this.month = 1;
@@ -393,17 +386,26 @@
               this.day -=1;
               }  
          }
-        }
-      
-   
 
-let date1 = new Date(12, 31, 2022);
+         subtraction(){
+           //dateobject
+         }
+
+      }
+
+        
+      
+
+
+
+
+let date1 = new Date(08, 3, 2022);
 let date2 = new Date(05, 31, 1998);
-let date3 = new Date(12, 31, 1999);
-let date4 = new Date(01, 01, 2022);
-date3.increment();
-date4.decrement();
-console.log(date4.print());
+let date3 = new Date(10, 31, 1999);
+let date4 = new Date(09, 02, 2022);
+date1.increment();
+date2.decrement();
+console.log(date1.print());
 /*if day is at maximum 
 if month is december
       set month to january
@@ -415,10 +417,3 @@ else they day is not at its max
   increment day*/
 
   
-
-      
-     
-
-
-
-
