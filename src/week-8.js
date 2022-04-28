@@ -338,7 +338,7 @@
     // console.log(xmas)
 
 
-    class Date {
+    class MyDate {
         constructor(month, day, year) {
           this.month = month;
           this.day = day;
@@ -347,7 +347,6 @@
           this.monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
           this.daysOfMonth = this.monthDays[month-1] //wherever i see 31 put this.
         }
-
 
     print(){ 
     return `The date is ${this.month}/${this.day}/${this.year}.\nThe date is ${this.monthNames[this.month-1]} ${this.day}, ${this.year}.\nThe date is ${this.day} ${this.monthNames[this.month-1]}, ${this.year}.`
@@ -372,7 +371,7 @@
 
           decrement(){
             if(this.day <= 1) {  
-              this.day = 31; 
+              this.day = this.daysOfMonth; 
               if (this.month = 1) {
                 this.month = 12;
                 this.year -= 1;
@@ -388,24 +387,23 @@
          }
 
          subtraction(){
-           //dateobject
-         }
-
+           //dateobject 
+        
+        }
       }
 
-        
-      
+let date1 = new MyDate(01, 1, 2022);
+let date2 = new MyDate(05, 31, 1998);
+let date3 = new MyDate(10, 31, 1999);
+let date4 = new MyDate(09, 02, 2022);
+let date5 = new MyDate(10, 02, 2022);
+let date6 = new MyDate(09, 02, 2022);
 
 
-
-
-let date1 = new Date(08, 3, 2022);
-let date2 = new Date(05, 31, 1998);
-let date3 = new Date(10, 31, 1999);
-let date4 = new Date(09, 02, 2022);
-date1.increment();
-date2.decrement();
-console.log(date1.print());
+date4.increment();
+date3.decrement();
+date6.subtraction();
+console.log(date5.print());
 /*if day is at maximum 
 if month is december
       set month to january
@@ -417,3 +415,4 @@ else they day is not at its max
   increment day*/
 
   
+//top down method
