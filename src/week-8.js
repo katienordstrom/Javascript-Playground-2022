@@ -340,12 +340,29 @@
 
     class MyDate {
         constructor(month, day, year) {
-          this.month = month;
-          this.day = day;
-          this.year = year;
+          // this.month = month;
+          // this.day = day;
+          
           this.monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
           this.monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
           this.daysOfMonth = this.monthDays[month-1] //wherever i see 31 put this.
+
+        if(month >= 1 && month <=12){
+          this.month = month;
+        } else {
+        this.month = "*Invalid Date Entered*"} 
+          
+        if(day >=1 && day <= this.daysOfMonth){
+          this.day = day;
+        } else {
+          this.day = "*Invalid Date Entered*"
+        }
+
+        if(year >= 1700 && year <= 3000){
+        this.year = year;
+        } else {
+          this.year = "*Invalid Year Entered*"
+        }
         }
 
     print(){ 
@@ -388,16 +405,22 @@
 
          subtraction(){
            //dateobject 
-        
+           var Difference_In_Time = date8.getTime() - date9.getTime();
+           var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+           console.log("Total number of days between dates " + date8 + date9 + " is: " + Math.abs(Difference_In_Days));
         }
       }
+
+      /*total up the days, plus the total number of days in all of the months(eg if month is 6, total up the days of the months 1-5 then add the days*365) */
 
 let date1 = new MyDate(01, 1, 2022);
 let date2 = new MyDate(05, 31, 1998);
 let date3 = new MyDate(10, 31, 1999);
 let date4 = new MyDate(09, 02, 2022);
-let date5 = new MyDate(10, 02, 2022);
+let date5 = new MyDate(10, 31, 2022);
 let date6 = new MyDate(09, 02, 2022);
+let date8 = new Date("06/30/2019")
+let date9 = new Date("07/30/2019")
 
 
 date4.increment();
