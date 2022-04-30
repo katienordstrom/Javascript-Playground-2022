@@ -340,19 +340,17 @@
 
     class MyDate {
         constructor(month, day, year) {
-          // this.month = month;
-          // this.day = day;
-          
+
           this.monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
           this.monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
           this.daysOfMonth = this.monthDays[month-1] //wherever i see 31 put this.
 
-        if(month >= 1 && month <=12){
+        if(month >= 1 && month <= 12){
           this.month = month;
         } else {
         this.month = "*Invalid Date Entered*"} 
           
-        if(day >=1 && day <= this.daysOfMonth){
+        if(day >= 1 && day <= this.daysOfMonth){
           this.day = day;
         } else {
           this.day = "*Invalid Date Entered*"
@@ -361,18 +359,20 @@
         if(year >= 1700 && year <= 3000){
         this.year = year;
         } else {
-          this.year = "*Invalid Year Entered*"
-        }
+          this.year = "*Invalid Year Entered*"}
+        
+    
         }
 
     print(){ 
     return `The date is ${this.month}/${this.day}/${this.year}.\nThe date is ${this.monthNames[this.month-1]} ${this.day}, ${this.year}.\nThe date is ${this.day} ${this.monthNames[this.month-1]}, ${this.year}.`
     }
   
-         increment() {
+         increment(){
+
           if(this.day >= this.daysOfMonth){  
             this.day = 1; 
-            if (this.month >= 12) {
+            if(this.month >= 12) {
               this.month = 1;
               this.year += 1;
             } 
@@ -387,21 +387,60 @@
           }
 
           decrement(){
-            if(this.day <= 1) {  
-              this.day = this.daysOfMonth; 
-              if (this.month = 1) {
-                this.month = 12;
-                this.year -= 1;
-              } 
-              else {
-                this.month -= 1;
-                this.day = 31;
-              } 
-            }
-              else {
-              this.day -=1;
-              }  
-         }
+            if (this.month <= 1){
+              this.year -= 1;
+              this.month = 12;
+            if(this.day <= 1){
+  this.daysOfMonth = this.monthDays[this.month-1];
+  this.day = this.daysOfMonth;
+
+} else {
+this.month -=1;
+}
+} else {
+  this.day -=1;
+}
+}
+
+
+            // if(this.day <= this.daysOfMonth) { 
+            //   this.day = this.daysOfMonth; 
+            //   if(this.month <= 1) {
+            //     this.month = 12;
+            //     this.year -= 1;
+            //   } 
+
+            //   else {
+            //     this.month -= 1;
+            //     this.day = this.daysOfMonth;
+            //   } 
+            // }
+
+            //   else {
+            //   this.day -= 1;
+              
+
+
+
+            
+
+
+            // if(this.day <= 1){  
+            //   this.day = this.daysOfMonth; 
+            //   if (this.month <= 1) {
+            //     this.month = 12;
+            //     this.year -= 1;
+            //   } 
+            //   else {
+            //     this.month -= 1;
+            //     this.day = this.daysOfMonth;
+            //   } 
+            // }
+            //   else {
+            //   this.day = this.daysOfMonth;
+            //   }  
+            
+         
 
          subtraction(){
            //dateobject 
@@ -413,20 +452,19 @@
 
       /*total up the days, plus the total number of days in all of the months(eg if month is 6, total up the days of the months 1-5 then add the days*365) */
 
-let date1 = new MyDate(01, 1, 2022);
-let date2 = new MyDate(05, 31, 1998);
-let date3 = new MyDate(10, 31, 1999);
-let date4 = new MyDate(09, 02, 2022);
+let date1 = new MyDate(05, 1, 2022);
+let date2 = new MyDate(07, 31, 1998);
+let date3 = new MyDate(03, 01, 1999);
+let date4 = new MyDate(09, 01, 2022);
 let date5 = new MyDate(10, 31, 2022);
 let date6 = new MyDate(09, 02, 2022);
 let date8 = new Date("06/30/2019")
 let date9 = new Date("07/30/2019")
 
-
-date4.increment();
-date3.decrement();
+date1.increment();
+date4.decrement();
 date6.subtraction();
-console.log(date5.print());
+console.log(date4.print());
 /*if day is at maximum 
 if month is december
       set month to january
