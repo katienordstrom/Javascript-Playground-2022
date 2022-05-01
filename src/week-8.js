@@ -387,20 +387,45 @@
           }
 
           decrement(){
-            if (this.month <= 1){
-              this.year -= 1;
-              this.month = 12;
-            if(this.day <= 1){
-  this.daysOfMonth = this.monthDays[this.month-1];
-  this.day = this.daysOfMonth;
 
+if(this.day <= 1 && this.month <= 1){
+  this.year -= 1;
+  this.month = 12;
+  this.day = this.daysOfMonth
+} else if (this.day <= 1 && this.month >= 1){
+  this.daysOfMonth = this.monthDays[this.month-2];
+  this.day = this.daysOfMonth
+  this.month -= 1;
 } else {
-this.month -=1;
+  this.day -= 1;
 }
-} else {
-  this.day -=1;
-}
-}
+          }
+
+
+
+
+           
+//             if (this.month <= 1){
+//               this.year -= 1;
+//               this.month = 12;
+//             if(this.day <= 1) {
+//               this.day = this.daysOfMonth;
+//   this.daysOfMonth = this.monthDays[this.month-1];
+
+// }else {
+//    this.month -= 1;
+//             //     this.day = this.daysOfMonth;
+// } 
+  
+// } else {
+//  ;
+//   }
+
+
+
+
+
+
 
 
             // if(this.day <= this.daysOfMonth) { 
@@ -415,21 +440,20 @@ this.month -=1;
             //     this.day = this.daysOfMonth;
             //   } 
             // }
-
             //   else {
             //   this.day -= 1;
-              
+            //   }
+            }
 
-
-
-            
-
+            // if (this.month <= 1) {
+            //   this.month = 12;
+            //   this.year -= 1;
 
             // if(this.day <= 1){  
-            //   this.day = this.daysOfMonth; 
+            //   this.day = this.daysOfMonth[month-1]; 
             //   if (this.month <= 1) {
             //     this.month = 12;
-            //     this.year -= 1;
+            //     this.year -= 1;}
             //   } 
             //   else {
             //     this.month -= 1;
@@ -438,7 +462,7 @@ this.month -=1;
             // }
             //   else {
             //   this.day = this.daysOfMonth;
-            //   }  
+            //   }   }
             
          
 
@@ -455,7 +479,7 @@ this.month -=1;
 let date1 = new MyDate(05, 1, 2022);
 let date2 = new MyDate(07, 31, 1998);
 let date3 = new MyDate(03, 01, 1999);
-let date4 = new MyDate(09, 01, 2022);
+let date4 = new MyDate(06, 01, 2022);
 let date5 = new MyDate(10, 31, 2022);
 let date6 = new MyDate(09, 02, 2022);
 let date8 = new Date("06/30/2019")
