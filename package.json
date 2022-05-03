@@ -2,8 +2,9 @@
   "name": "javascript-playground-2022",
   "version": "1.0.0",
   "description": "Created in week 3. Beginning to learn javascript",
-  "main": "app.js",
+  "main": "week-9.js",
   "scripts": {
+    "dev": "nodemon ./src/week-9.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,6 @@
   },
   "homepage": "https://github.com/katienordstrom/Javascript-Playground-2022#readme",
   "dependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.16"
   }
 }
