@@ -218,62 +218,59 @@
   // } 
 
 
-  let matrix = [
+  let grid = [
     [0, 1, 0, 0],
     [0, 0, 1, 0],
     [0, 1, 0, 1],
     [1, 1, 0, 0]]
 
  
-  for (let i = 0; i < matrix.length; i++) {
-      console.log(matrix[i])}
+  for (let i = 0; i < grid.length; i++) {
+      console.log(grid[i])}
      
-
-
-
-      function minesweeper(matrix) {
+      function minesweeper(grid) {
         var newArr = [];
      
-        for(var i=0; i < matrix.length; i++){
+        for(var i=0; i < grid.length; i++){
           newArr.push([]);
-          for(var j=0; j < matrix[i].length; j++){
-            var cnt = 0;
+          for(var j=0; j < grid[i].length; j++){
+            var empty= 0;
             if(i>0){
-              if(matrix[i-1][j]){
-                cnt += 1;
+              if(grid[i-1][j]){
+                empty+= 1;
               }
-              if(matrix[i-1][j+1]){
-                cnt += 1;
+              if(grid[i-1][j+1]){
+                empty+= 1;
               }
-              if(matrix[i-1][j-1]){
-                cnt += 1;
+              if(grid[i-1][j-1]){
+                empty+= 1;
               }
             }
-            if(i < matrix.length - 1){
-              if(matrix[i+1][j]){
-                cnt +=1;
+            if(i < grid.length - 1){
+              if(grid[i+1][j]){
+                empty+=1;
               }
-              if(matrix[i+1][j+1]){
-                cnt += 1;
+              if(grid[i+1][j+1]){
+                empty+= 1;
               }
-              if(matrix[i+1][j-1]){
-                cnt +=1;
+              if(grid[i+1][j-1]){
+                empty+=1;
               }
             }
       
-            if(matrix[i][j+1]){
-              cnt +=1;
+            if(grid[i][j+1]){
+              empty+=1;
             }
-            if(matrix[i][j-1]){
-              cnt +=1;
+            if(grid[i][j-1]){
+              empty+=1;
             }
-            newArr[i].push(cnt)
+            newArr[i].push(empty)
           }
         }
         return newArr
       }
-      for (let i = 0; i < matrix.length; i++) {
-      console.log(minesweeper(matrix))}
+       
+      console.log(minesweeper(grid))
 
       
 
